@@ -307,22 +307,22 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
         -webkit-box-orient: vertical;
     }
 
-    #promocao .carousel .item {
+    .carousel .item  {
         padding: 5%;
         border-bottom: 8px solid var(--base-color-second);
     }
 
-    #promocao .carousel .item .img-box {
+     .carousel .item .img-box {
         height: 164px !important;
         margin-bottom: 15px !important;
         margin-top: 0 !important;
     }
 
-    #promocao .list-inline-item:not(:last-child) {
+     .list-inline-item:not(:last-child) {
         margin-right: 0 !important;
     }
 
-    #promocao .carousel .thumb-content .btn:hover {
+     .carousel .thumb-content .btn:hover {
         background-color: var(--base-color-second) !important;
         border-color: white;
     }
@@ -839,12 +839,12 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
 
     /*** Testimonial ***/
     .testimonial {
-        background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(https://www.mirao.com.br/media/mageplaza/blog/post/s/h/shutterstock_1430140061-scaled.jpg);
+        /* background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(https://www.mirao.com.br/media/mageplaza/blog/post/s/h/shutterstock_1430140061-scaled.jpg); */
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
     }
 
     .testimonial-carousel {
@@ -901,6 +901,11 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
         right: -5px;
         text-align: left;
     }
+
+    /* #content-depoimento .owl-carousel.owl-drag .owl-item {
+        width: 452px !important;
+        height: auto;
+    } */
 </style>
 
 <style>
@@ -916,14 +921,169 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
         max-width: 90%;
         width: auto;
     }
+
+    /* Style the Image Used to Trigger the Modal */
+    #myImg {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Black w/ opacity */
+    }
+
+    /* Modal Content (Image) */
+    #myModal .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    /* Add Animation - Zoom in the Modal */
+    .modal-content,
+    #caption {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px) {
+        .modal-content {
+            width: 100%;
+        }
+    }
+
+
+
+
+    #depoimentos p {
+        color: #999999;
+        font-weight: 300;
+    }
+
+    #depoimentos a {
+        -webkit-transition: .3s all ease;
+        -o-transition: .3s all ease;
+        transition: .3s all ease;
+    }
+
+    #depoimentos a,
+    a:hover {
+        text-decoration: none !important;
+    }
+
+    #depoimentos .content {
+        padding: 7rem 0;
+    }
+
+    #depoimentos h2 {
+        font-size: 20px;
+    }
+
+
+    #depoimentos .owl-item {
+        width: 428px !important;
+        margin-right: 20px;
+        height: auto;
+        padding: 1%;
+        background: white;
+    }
+
+    #depoimentos .media-29101 {
+        text-align: center;
+    }
+
+    #depoimentos .media-29101 h3 {
+        font-size: 18px;
+        font-weight: 900 !important;
+        margin-bottom: 30px;
+    }
+
+    #depoimentos .media-29101 h3 a {
+        color: #6c757d;
+    }
+
+    #depoimentos .owl-2-style .owl-nav {
+        display: none;
+    }
 </style>
 
 <link media rel="stylesheet" href="<?php echo base_url('resources/css/'); ?>style.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 
 <style>
     .carousel-caption {
         bottom: 82px !important;
+    }
+
+    #content-depoimento .owl-item:not(div.item) {
+
     }
 </style>
 
@@ -1178,10 +1338,10 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                             <div class="col">
                                 <div class="bbb_viewed_title_container container" style="width:80%">
                                     <h3 class="bbb_viewed_title">Destaques</h3>
-                                    <div class="bbb_viewed_nav_container">
+                                    <!-- <div class="bbb_viewed_nav_container">
                                         <div class="bbb_viewed_nav bbb_viewed_prev"><i class="fas fa-chevron-left"></i></div>
                                         <div class="bbb_viewed_nav bbb_viewed_next"><i class="fas fa-chevron-right"></i></div>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="bbb_viewed_slider_container">
                                     <div class="owl-carousel owl-theme bbb_viewed_slider carousel">
@@ -1232,7 +1392,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                                 <div class="carousel-item <?php if ($aux == 1) {
                                                                 echo 'active';
                                                             } ?>">
-                                    <div class="card-body mx-auto" style="margin-top: 10%; margin-bottom: 10%; height: 300px; border-bottom: 7px solid var(--base-color-second); border-radius: 7px; width: 60%; box-shadow: -1px 8px 39px 1px rgba(0,0,0,0.35); -webkit-box-shadow: -2px 6px 17px 4px rgb(0 0 0 / 20%); -moz-box-shadow: -1px 8px 39px 1px rgba(0,0,0,0.35);">
+                                    <div class="card-body mx-auto" style="margin-top: 10%; margin-bottom: 10%; height: 300px; border-bottom: 7px solid var(--base-color); border-radius: 7px; width: 60%; box-shadow: -1px 8px 39px 1px rgba(0,0,0,0.35); -webkit-box-shadow: -2px 6px 17px 4px rgb(0 0 0 / 20%); -moz-box-shadow: -1px 8px 39px 1px rgba(0,0,0,0.35);">
                                         <a href="<?php echo base_url('e9b8ed001f1726b0385dcfec2dbe2ea1/') . $destaque['servico_id'] ?>">
                                             <div class="row">
                                                 <div class="col-md-12">
@@ -1282,9 +1442,9 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                 </div>
             <?php } ?>
 
-            <?php if ($mobile_view == 0) { ?>
+            <?php //if ($mobile_view == 0) { ?>
                 <!-- Parallax -->
-                <section class="parallax parallax2 w-100" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
+                <!-- <section class="parallax parallax2 w-100" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;">
                     <div class="parallax-overlay">
                         <div class="row w-100">
                             <div class="col-md-12">
@@ -1292,20 +1452,20 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                             </div>
                         </div>
                     </div>
-                </section>
-            <?php } ?>
+                </section> -->
+            <?php //} ?>
 
             <!-- Veja também -->
-            <section id="veja-tbm" class="container mt-4" <?= !$mobile_view ? 'style="width: 80%"' : '' ?>>
+            <!-- <section id="veja-tbm" class="container mt-4" <?= !$mobile_view ? 'style="width: 20%"' : '' ?>>
                 <div class="bbb_viewed_title_container container">
                     <h3 class="bbb_viewed_title">Veja Também</h3>
                 </div>
-                <div class="row mt-4">
+                <div class="row mt-4"> -->
                     <?php $cont = 1;
                     foreach ($vejatbm as $vj) { ?>
                         <?php $aux_nome = explode(' ', $vj['servico_nome'], 2) ?>
                         <?php if ($mobile_view == 0) { ?>
-                            <div class="col-sm-2">
+                            <!-- <div class="col-sm-2">
                                 <div class="card zoom card-relacionados" style="border-radius: 7px;">
                                     <div class="card-body" style="height: 320px; border-bottom: 7px solid var(--base-color-second); border-radius: 7px; padding: 10% 0 0 0;">
                                         <a href="<?php echo base_url('e9b8ed001f1726b0385dcfec2dbe2ea1/') . $vj['servico_id'] ?>">
@@ -1333,15 +1493,15 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                                                         <p class="text-center prod-departamento mb-0 text-muted"><?= $vj['servico_qtd_parcela'] ?></p>
                                                     <?php }
                                                     $cont++; ?>
-                                                    <!-- <button type="button" class="btn-main"><i style="font-size: 16px" class="fa fa-cart-plus" aria-hidden="true"></i> COMPRAR</button> -->
+                                                     <button type="button" class="btn-main"><i style="font-size: 16px" class="fa fa-cart-plus" aria-hidden="true"></i> COMPRAR</button> 
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         <?php } else { ?>
-                            <div class="col-6 margin-card-ipad mb-4">
+                            <!-- <div class="col-6 margin-card-ipad mb-4">
                                 <div class="card zoom card-relacionados" style="border-radius: 7px;">
                                     <div class="card-body" style="height: 300px; border-bottom: 7px solid var(--base-color-second); border-radius: 7px;">
                                         <a href="<?php echo base_url('e9b8ed001f1726b0385dcfec2dbe2ea1/') . $vj['servico_id'] ?>">
@@ -1373,18 +1533,18 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                                                         <?php } ?>
                                                     <?php }
                                                     $cont++; ?>
-                                                    <!-- <button type="button" class="btn-main"><i style="font-size: 16px" class="fa fa-cart-plus" aria-hidden="true"></i> COMPRAR</button> -->
+                                                    <button type="button" class="btn-main"><i style="font-size: 16px" class="fa fa-cart-plus" aria-hidden="true"></i> COMPRAR</button>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         <?php } ?>
 
                     <?php } ?>
-                </div>
-            </section>
+                <!-- </div>
+            </section> -->
 
             <!-- Perguntas Start -->
             <div id="perguntas " class="faqs divPrincipalPerguntas" style="overflow-x: hidden;">
@@ -1460,17 +1620,42 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
     </div>
 
     <!-- Depoimentos Start -->
-    <div class="container-xxl mx-auto px-2" style="padding-bottom: 2% !important;  width: 80%">
+    <div class="container-xxl mx-auto px-2" style="padding-bottom: 2% !important;  width: 80%;">
         <div class="bbb_viewed_title_container container">
             <h3 class="bbb_viewed_title">Depoimentos</h3>
         </div>
     </div>
 
-    <?php if ($mobile_view == 0) { ?>
-
-        <div id="depoimentos" class=" p-0">
-            <div class="testimonial py-5 bg-dark d-flex align-items-center" style="height: 300px;">
-                <div id="carouselExampleControls3" class="carousel slide w-100" data-ride="carousel3">
+    <div id="content-depoimento" class="mx-auto" style="width: 80%">
+        <?php if ($mobile_view == 0) { ?>
+    
+            <div class="bbb_viewed_slider_container">
+                <div class="owl-carousel owl-theme teste carousel">
+                    <?php foreach ($depoimentos as $depoimento) {
+                        if ($depoimento['depoimento_ativoimagem'] == 0) { ?>
+                            <div class="item h-100 d-flex justify-content-center">
+                                <div class="text-center text-dark" style="display: flex!important; justify-content: center; flex-wrap: wrap; align-content: center;">
+                                    <h3><?= $depoimento['depoimento_titulo'] ?></h3>
+                                    <p><?= $depoimento['depoimento_texto'] ?></p>
+                                </div>
+                            </div>
+                        <?php } else { ?>
+                            <div class="item h-100 d-flex justify-content-center">
+                                <div class="text-center text-dark" style="display: flex!important; justify-content: center; flex-wrap: wrap; align-content: center;">
+                                    <h3><?= $depoimento['depoimento_titulo'] ?></h3>
+                                    <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:70%">
+                                </div>
+                            </div>
+                        <?php 
+                        } 
+                    } ?>
+                </div>
+            </div>
+    
+        <?php } else { ?>
+            <!--card-dep #testimonial --> 
+            <div id="depoimentos-mobile" class="testimonial" style="width: 100%; margin-top: 5%; height: 310px; padding: 15%;">
+                <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel3">
                     <div class="carousel-inner">
                         <?php $cont = 1;
                         foreach ($depoimentos as $depoimento) { ?>
@@ -1478,8 +1663,8 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                                 <div class="carousel-item <?php if ($cont == 1) {
                                                                 echo 'active';
                                                             } ?>">
-                                    <div class="card-dep text-center" style="justify-content: center;">
-                                        <h3><?= $depoimento['depoimento_titulo'] ?></h3>
+                                    <div class="card-dep">
+                                        <h4><a href="#"><?= $depoimento['depoimento_titulo'] ?></:></a></h4>
                                         <p><?= $depoimento['depoimento_texto'] ?></p>
                                     </div>
                                 </div>
@@ -1487,95 +1672,28 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                                 <div class="carousel-item <?php if ($cont == 1) {
                                                                 echo 'active';
                                                             } ?>">
-                                    <div class="card-dep text-center" style="justify-content: center;">
-                                        <h3><?= $depoimento['depoimento_titulo'] ?></h3tyle=>
-                                            <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:100%">
+                                    <div class="card-dep">
+                                        <h4><a href="#"><?= $depoimento['depoimento_titulo'] ?></:></a></h4>
+                                        <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:80%">
                                     </div>
                                 </div>
                             <?php } ?>
                         <?php $cont++;
                         } ?>
                     </div>
-
+    
                     <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
-                        <span class="" aria-hidden="true"><i class="fas fa-chevron-left" style="color: white; font-size: 30px; position: relative; left: -48px;"></i></span>
+                        <span class="" aria-hidden="true"><i class="fas fa-chevron-left" style="color: var(--base-color); font-size: 30px; position: relative; left: -48px;"></i></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
-                        <span class="" aria-hidden="true"><i class="fas fa-chevron-right" style="color: white; font-size: 30px; position: relative; right: -48px;"></i></span>
+                        <span class="" aria-hidden="true"><i class="fas fa-chevron-right" style="color: var(--base-color); font-size: 30px; position: relative; right: -48px;"></i></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
             </div>
-        </div>
-
-        <!--<div id="depoimentos" class=" p-0">-->
-        <!--    <div class="testimonial py-5 bg-dark" style="height: 400px;">-->
-        <!--        <div class="container">-->
-        <!--            <div class="site-section bg-left-half mb-5">-->
-        <!--                <div class="container owl-2-style">-->
-        <!--                    <div class="owl-carousel owl-2 wow zoomIn" data-wow-delay="0.1s">-->
-        <!--                        <?php foreach ($depoimentos as $depoimento) { ?>-->
-        <!--                            <?php if ($depoimento['depoimento_ativoimagem'] == 0) { ?>-->
-        <!--                                <div class="media-29101">-->
-        <!--                                    <h3><a href="#"><?= $depoimento['depoimento_titulo'] ?></:></a></h3>-->
-        <!--                                    <p><?= $depoimento['depoimento_texto'] ?></p>-->
-        <!--                                </div>-->
-        <!--                            <?php } else { ?>-->
-        <!--                                <div class="media-29101 text-center">-->
-        <!--                                    <h3><a href="#"><?= $depoimento['depoimento_titulo'] ?></:></a></h3>-->
-        <!--                                    <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:80%">-->
-        <!--                                </div>-->
-        <!--                            <?php } ?>-->
-        <!--                        <?php } ?>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</div>-->
-
-    <?php } else { ?>
-        <!--card-dep-->
-        <div id="depoimentos-mobile" class="testimonial" style="width: 100%; margin-top: 5%; height: 310px; padding: 15%;">
-            <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel3">
-                <div class="carousel-inner">
-                    <?php $cont = 1;
-                    foreach ($depoimentos as $depoimento) { ?>
-                        <?php if ($depoimento['depoimento_ativoimagem'] == 0) { ?>
-                            <div class="carousel-item <?php if ($cont == 1) {
-                                                            echo 'active';
-                                                        } ?>">
-                                <div class="card-dep">
-                                    <h3><a href="#"><?= $depoimento['depoimento_titulo'] ?></:></a></h3>
-                                    <p><?= $depoimento['depoimento_texto'] ?></p>
-                                </div>
-                            </div>
-                        <?php } else { ?>
-                            <div class="carousel-item <?php if ($cont == 1) {
-                                                            echo 'active';
-                                                        } ?>">
-                                <div class="card-dep">
-                                    <h3><a href="#"><?= $depoimento['depoimento_titulo'] ?></:></a></h3>
-                                    <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:80%">
-                                </div>
-                            </div>
-                        <?php } ?>
-                    <?php $cont++;
-                    } ?>
-                </div>
-
-                <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
-                    <span class="" aria-hidden="true"><i class="fas fa-chevron-left" style="color: white; font-size: 30px; position: relative; left: -48px;"></i></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
-                    <span class="" aria-hidden="true"><i class="fas fa-chevron-right" style="color: white; font-size: 30px; position: relative; right: -48px;"></i></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    <?php } ?>
+        <?php } ?>
+    </div>
     <!-- Depoimentos End -->
 </main>
 
@@ -1620,191 +1738,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
     <?php } ?>
 <?php } ?>
 
-<style>
-    /* Style the Image Used to Trigger the Modal */
-    #myImg {
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    #myImg:hover {
-        opacity: 0.7;
-    }
-
-    /* The Modal (background) */
-    .modal {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        padding-top: 100px;
-        /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0);
-        /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.9);
-        /* Black w/ opacity */
-    }
-
-    /* Modal Content (Image) */
-    #myModal .modal-content {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-    }
-
-    /* Caption of Modal Image (Image Text) - Same Width as the Image */
-    #caption {
-        margin: auto;
-        display: block;
-        width: 80%;
-        max-width: 700px;
-        text-align: center;
-        color: #ccc;
-        padding: 10px 0;
-        height: 150px;
-    }
-
-    /* Add Animation - Zoom in the Modal */
-    .modal-content,
-    #caption {
-        animation-name: zoom;
-        animation-duration: 0.6s;
-    }
-
-    @keyframes zoom {
-        from {
-            transform: scale(0)
-        }
-
-        to {
-            transform: scale(1)
-        }
-    }
-
-    /* The Close Button */
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #f1f1f1;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    /* 100% Image Width on Smaller Screens */
-    @media only screen and (max-width: 700px) {
-        .modal-content {
-            width: 100%;
-        }
-    }
-
-
-
-
-    #depoimentos p {
-        color: #999999;
-        font-weight: 300;
-    }
-
-    #depoimentos a {
-        -webkit-transition: .3s all ease;
-        -o-transition: .3s all ease;
-        transition: .3s all ease;
-    }
-
-    #depoimentos a,
-    a:hover {
-        text-decoration: none !important;
-    }
-
-    #depoimentos .content {
-        padding: 7rem 0;
-    }
-
-    #depoimentos h2 {
-        font-size: 20px;
-    }
-
-
-    #depoimentos .owl-item {
-        width: 428px !important;
-        margin-right: 20px;
-        height: auto;
-        padding: 1%;
-        background: white;
-    }
-
-    #depoimentos .media-29101 {
-        text-align: center;
-    }
-
-    #depoimentos .media-29101 h3 {
-        font-size: 18px;
-        font-weight: 900 !important;
-        margin-bottom: 30px;
-    }
-
-    #depoimentos .media-29101 h3 a {
-        color: #6c757d;
-    }
-
-    #depoimentos .owl-2-style .owl-nav {
-        display: none;
-    }
-</style>
-
-<script>
-    $(function() {
-
-        if ($('.owl-2').length > 0) {
-            $('.owl-2').owlCarousel({
-                center: false,
-                items: 1,
-                loop: true,
-                stagePadding: 0,
-                margin: 20,
-                smartSpeed: 1000,
-                autoplay: true,
-                nav: true,
-                dots: false,
-                pauseOnHover: false,
-                responsive: {
-                    600: {
-                        margin: 20,
-                        nav: true,
-                        items: 2
-                    },
-                    1000: {
-                        margin: 20,
-                        stagePadding: 0,
-                        nav: true,
-                        items: 3
-                    }
-                }
-            });
-        }
-    })
-</script>
-
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

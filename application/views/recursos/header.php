@@ -3,11 +3,11 @@
 
 <head>
     <!-- meta descrição -->
-    <title>Datacom Notebook e Informática</title>
-    <meta name="title" content="Datacom Notebook e Informática">
+    <title>Zebu Imports</title>
+    <meta name="title" content="Zebu Imports">
     <meta name="author" content="N Soluções Agência Digital - https://nsolucoes.digital/" />
-    <meta name="description" content="DataCom Notebook e Informática" />
-    <meta name="keywords" content="DataCom, informatica, notebook, celular, reparo, loja" />
+    <meta name="description" content="Zebu Imports" />
+    <meta name="keywords" content="Zebu Imports" />
 
 
     <!--===============================================================================================-->
@@ -37,7 +37,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 
     <!-- SweetAlert2 -->
     <link href="<?php echo base_url('recursos/lib/sweetalert2/dist/sweetalert2.min.css') ?>" rel="stylesheet" type="text/css">
@@ -167,7 +166,7 @@
         }
 
         li a:hover {
-            color: var(--base-color-second) !important;
+            color: var(--base-color) !important;
         }
 
         .botao-voltar {
@@ -462,10 +461,10 @@
         }
 
         .mobile-logo {
-            width: 150px;
+            width: 100px;
             height: auto;
             z-index: 1;
-            margin: 10% 10% 15%;
+            margin: 4% 10% 10%;
         }
 
         .menu-transparente {
@@ -502,7 +501,7 @@
         }
 
         .nav-item:hover {
-            color: var(--base-color-second) !important;
+            color: var(--base-color) !important;
             font-weight: bold;
             font-size: 17px;
         }
@@ -1052,7 +1051,7 @@ if ($this->session->userdata('cliente_nome')) {
                                             </li>-->
                                                         <li class="menu-li" style="position: relative;top: 20px;left: 80px; margin-left: 30px;">
                                                             <span class="menu-a" href="#">
-                                                                <span style="font-size: 15px;"><i style="font-size: 30px; color: var(--base-color-second);" class="fa fa-user-circle"></i><span>&nbsp Faça <a style="font-weight: 500; color:white;" href="<?php echo base_url('2b1e190210df261675c4b801bc6e8989') ?>">Login</a> ou <br>
+                                                                <span style="font-size: 15px;"><i style="font-size: 30px; color: var(--base-color);" class="fa fa-user-circle"></i><span>&nbsp Faça <a style="font-weight: 500; color:white;" href="<?php echo base_url('2b1e190210df261675c4b801bc6e8989') ?>">Login</a> ou <br>
                                                                         <ul style="padding-left: 67px;">crie seu <a style="font-weight: 500; color:white;" href="<?php echo base_url('2b1e190210df261675c4b801bc6e8989') ?>">Cadastro</a>
                                                                     </span>
                                                 </ul></span>
@@ -1066,7 +1065,7 @@ if ($this->session->userdata('cliente_nome')) {
                                                                                 } ?> href="<?php echo base_url('432b311230a5e558d6dfdd37aa7cb986'); ?>">
                                                         <i <?php if (!$mobile_view) {
                                                                 echo "id='span'";
-                                                            } ?> style="font-size: 30px; color: var(--base-color-second);" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                            } ?> style="font-size: 30px; color: var(--base-color);" class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                         <!--<span style="font-size: 15px; padding-left: 5px"></span>-->
                                                         <?php if ($this->session->userdata('quantidade_carrinho')) { ?>
                                                             <?php if ($this->session->userdata('quantidade_carrinho') > 0) { ?>
@@ -1099,20 +1098,20 @@ if ($this->session->userdata('cliente_nome')) {
                                     <div class="d-block mobile_menu">
                                         <div class="row" style="margin-bottom: -5%;">
                                             <div class="col-6 text-center">
-                                                <a class="mobile-link-logo-pos" href="<?php echo base_url('') ?>"><img class="mobile-logo" src="<?php echo base_url('imagens/site/logo.png') ?>" alt="logo" title="DataCom Notebook e Informática"></a>
+                                                <a class="mobile-link-logo-pos" href="<?php echo base_url('') ?>"><img class="mobile-logo" src="<?php echo base_url('imagens/site/logo.png') ?>" alt="logo" title="Zebu Imports"></a>
                                             </div>
 
                                             <div class="col-6 text-right usuario-mobile" style="position: relative; right: 0; top: 0; padding: 5% 10%;">
                                                 <a class="menu-link menu-a user-icon-pos" href="<?php echo base_url('2b1e190210df261675c4b801bc6e8989') ?>" style="<?php if ($idpag == 6) {
                                                                                                                                                                         echo 'color: #f9c716;';
                                                                                                                                                                     } ?>">
-                                                    <i style="color: var(--base-color-second); font-size: 30px" class="fa fa-user-circle" aria-hidden="true"></i>
+                                                    <i style="color: var(--base-color); font-size: 30px" class="fa fa-user-circle" aria-hidden="true"></i>
                                                 </a>
                                                 <?php if (isset($_SESSION['perfil']) && isset($_SESSION) && $_SESSION['perfil'] != 'afiliado') { ?>
                                                     <a href="<?php echo base_url('432b311230a5e558d6dfdd37aa7cb986'); ?>" class="menu-link menu-a cart-icon-pos" style="<?php if ($idpag == 5) {
                                                                                                                                                                             echo 'color: #f9c716;';
                                                                                                                                                                         } ?>">
-                                                        <i style="color: var(--base-color-second); font-size: 25px" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                        <i style="color: var(--base-color); font-size: 25px" class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                     </a>
                                                 <?php } ?>
                                             </div>
@@ -1122,7 +1121,7 @@ if ($this->session->userdata('cliente_nome')) {
                                         <div class="row">
                                             <div class="col-2 botaoNav">
                                                 <button class="navbar-toggler d-block" style="width: 60%; height: 50%; margin-top: 80%; margin-left: 30%;" type="button" id="navToggleMobile">
-                                                    <i class="fas fa-bars" onclick="mySideBar()" style="color: var(--base-color-second); position: relative; left: -9px;"></i>
+                                                    <i class="fas fa-bars" onclick="mySideBar()" style="color: var(--base-color); position: relative; left: -9px;"></i>
                                                 </button>
                                             </div>
                                             <div class="col-10 search-div">

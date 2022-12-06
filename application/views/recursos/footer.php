@@ -490,7 +490,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
 
     footer {
         width: 100%;
-        font-size: 100px;
+        /* font-size: 100px; */
         background: var(--base-color-second);
     }
 
@@ -511,7 +511,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
     }
 
     #back-top {
-        background: var(--base-color-second);
+        background: var(--base-color);
         /*afd4fa*/
         color: black;
         left: unset;
@@ -526,7 +526,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
     }
 
     #back-top a i {
-        color: white;
+        color: var(--base-color-second);
     }
 
     .new-cookie {
@@ -625,22 +625,17 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
         <div class="row">
             <div class="col-md-2 text-center">
                 <div class="row">
-                    <a href="<?php echo base_url() ?>" style="position: relative; top: -52px;">
-                        <img class="img-fluid" src="<?php echo base_url('imagens/LOGO/perfil01.png') ?>" style="width: 60%; margin-bottom: 15px; margin-left: 18%;">
+                    <a href="<?php echo base_url() ?>" style="position: relative; top: -40px;">
+                        <img class="img-fluid" src="<?php echo base_url('imagens/LOGO/perfil01.png') ?>" style="width: 65%; margin-bottom: auto; margin-left: auto;">
                     </a>
                 </div>                
             </div>
             <div class="col-md-4">
                 <div class="endereco-ipad" style="">
                     <ul>
-                        <li style="color: white; font-size: 14px; list-style-type: none; font-weight:bold; padding-bottom: 7px;">DATACOM
-                        </li>
-                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fa fa-phone-alt text-primary me-2" style="color: var(--base-color-second) !important;"></i> (34) 3322-6953
-                        </li>
-                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fas fa-map-marker-alt text-primary me-2" style="color: var(--base-color-second) !important;"></i>&nbsp Av. Elías Cruvinel, 705 - Boa Vista, Uberaba - MG
-                        </li>
-                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fas fa-envelope text-primary me-2" style="color: var(--base-color-second) !important;"></i>&nbsp atendimento@datacominformatica.com.br
-                        </li>
+                        <li style="color: white; font-size: 14px; list-style-type: none; font-weight:bold; padding-bottom: 7px;">Zebu Imports</li>
+                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fab fa-whatsapp text-primary me-2" style="color: var(--base-color) !important;"></i> (34) 99724-7690</li>
+                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fas fa-envelope text-primary me-2" style="color: var(--base-color) !important;"></i>&nbsp atendimento@zebuimports.com.br</li>
                     </ul>
                     <?php //if(isset($endereco)){ 
                     ?>
@@ -657,25 +652,24 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
             </div>
             <div class="col-md-6">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div style="">
-                            <ul>                                
-                                <a href="https://www.facebook.com/Datacomnotebook/?ref=bookmarks" target="_blank"><i class="social-footer fab fa-facebook" aria-hidden="true" style="color: var(--base-color-second);"></i>
-                                <a href="https://www.instagram.com/datacomnotebook/?hl=pt-br" target="_blank"><i class="social-footer fab fa-instagram" aria-hidden="true" style="color: var(--base-color-second);"></i>
-                                <a href="#" target="_blank"><i class="social-footer fab fa-youtube" aria-hidden="true" style="color: var(--base-color-second);"></i>
-                        </a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div style="">
-                            <ul>
-                                <li style="color: white; font-size: 14px; list-style-type: none; font-weight:bold; padding-bottom: 7px;">Sobre</li>
-                                <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><a style="color: white; cursor: pointer;" data-toggle="modal" data-target="#nossaloja">Nossa Loja</a></li>
-                                <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><a style="color: white; cursor: pointer;" data-toggle="modal" data-target="#namidia">Na mídia</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                        <div class="row justify-content-center">
+                                <h5 style="color: white; font-size: 14px; list-style-type: none; font-weight:bold; padding-bottom: 7px ;">Conheça nossas redes sociais</h5>
+                                <div class="col-4 my-4 p-0 m-auto">
+                                    <a href="#" target="_blank" style="margin: 22%; margin-left: -14px;">
+                                        <i class="social-footer fab fa-facebook" aria-hidden="true" style="color: var(--base-color)"></i>
+                                    </a>
+                                
+                                    <a href="https://www.instagram.com/zebu_imports/" target="_blank" style="margin: 30%;">
+                                        <i class="social-footer fab fa-instagram" aria-hidden="true" style="color: var(--base-color)"></i>
+                                    </a>
+                                
+                                    <a href="https://contate.me/zebuimports" target="_blank" style="margin: 16%;">
+                                        <i class="social-footer fab fa-whatsapp" aria-hidden="true" style="color: var(--base-color)"></i>
+                                    </a>
+                                </div>
+                        </div>                 
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -685,7 +679,7 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                     <img src="<?php echo base_url('imagens/site/formaspagamento.png') ?>" style="width: 80%; text-align: center; z-index: 101; margin-top: -3%; margin-left: 6%;">
                 </div>
                 <div class="col-md-4 text-center mb-3 mb-md-0">
-                    <p style="color: white; font-size: 11px;">© DataCom, todos os direitos reservados. </p>
+                    <p style="color: white; font-size: 11px;">© Zebu Imports, todos os direitos reservados. </p>
 
                 </div>
                 <div class="col-md-4 text-end mb-3 mb-md-0" style="text-align: right; padding-right: 2%;">
@@ -702,11 +696,11 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
             <div>
                 <div class="text-center form-group div-logo" style="padding-top: 10%">
                     <h3 style="color: white; font-size: 30px; list-style-type: none; font-weight:500; padding-bottom: 7px;">
-                        DataCom
+                        Zebu Imports
                     </h3>
                 </div>
 
-                <div class="text-center form-group div-social" style="">
+                <!-- <div class="text-center form-group div-social" style="">
                     <a href="https://www.facebook.com/Datacomnotebook/?ref=bookmarks" class="espacamento-icone" target="_blank">
                         <i class="social-footer fab fa-facebook" aria-hidden="true" style="color: var(--base-color-second); position: relative !important"></i>
                     </a>
@@ -718,45 +712,37 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                     <a href="#" class="espacamento-icone" target="_blank">
                         <i class="social-footer fab fa-youtube" aria-hidden="true" style="color: var(--base-color-second); position: relative !important"></i>
                     </a>
-                    <!--<a href="#" class="espacamento-icone" target="_blank">-->
-                    <!--    <i class="social-footer fab fa-twitter" aria-hidden="true" style="color: var(--base-color-second); position: relative !important"></i>-->
-                    <!--</a>-->
-                </div>
+                    <a href="#" class="espacamento-icone" target="_blank">
+                       <i class="social-footer fab fa-twitter" aria-hidden="true" style="color: var(--base-color-second); position: relative !important"></i>
+                    </a>
+                </div> -->
 
                 <hr style="border-top: 1px solid rgba(256, 256, 256, .1)">
-
-                <div class="contato-div-ipad text-center form-group" style="">
-                    <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fa fa-phone-alt text-primary me-2" style="color: var(--base-color-second)!important;"></i> (34) 3322-6953
-                        <!--#afd4fa-->
-                    </li>
-                    <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fas fa-map-marker-alt text-primary me-2" style="color: var(--base-color-second)!important;"></i>&nbsp Av. Elías Cruvinel, 705 - Boa Vista, <br>Uberaba - MG
-                    </li>
-                    <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><i class="fas fa-envelope text-primary me-2" style="color: var(--base-color-second)!important;"></i>&nbsp atendimento@datacominformatica.com.br
-                    </li>
-                </div>
 
                 <div class="text-center" style="margin-right: 6%;">
                     <img src="<?php echo base_url('imagens/site/formaspagamento.png') ?>" class="formas-pagamento-ipad" style="width: 99%; text-align: center; z-index: 101; margin: -15% 4% 0% 4%;">
                 </div>
 
-                <div class="text-center form-group mx-auto" style="display: flex;">
-                    <div style="width: 50%;">
-                        <li style="color: white; font-size: 12px; list-style-type: none; font-weight:bold; padding-bottom: 7px;">Afiliados</li>
-                        <li style="color: white; font-size: 12px; list-style-type: none; padding-bottom: 7px;"><a href="https://datacom.nsolucoes.digital/entrarAfiliado">Login</a></li>
-                        <li style="color: white; font-size: 12px; list-style-type: none; padding-bottom: 7px;"><a href="https://datacom.nsolucoes.digital/cadastroAfiliado">Cadastro</a></li>
-
+                <div class="row justify-content-center">
+                    <h5 style="color: white; font-size: 14px; list-style-type: none; font-weight:bold; padding-bottom: 7px;" class="text-align-center">Conheça nossas redes sociais</h5>
+                    <div class="col-12">
+                        <a href="#" target="_blank" style="margin: 18%; margin-left: 50px;">
+                            <i class="social-footer fab fa-facebook" aria-hidden="true" style="color: var(--base-color)"></i>
+                        </a>
+                    
+                        <a href="https://www.instagram.com/zebu_imports/" target="_blank" style="">
+                            <i class="social-footer fab fa-instagram" aria-hidden="true" style="color: var(--base-color)"></i>
+                        </a>
+                        <a href="https://contate.me/zebuimports" target="_blank" style="margin: 18%;">
+                            <i class="social-footer fab fa-whatsapp" aria-hidden="true" style="color: var(--base-color)"></i>
+                        </a>
                     </div>
-                    <div style="width: 50%;">
-                        <li style="color: white; font-size: 12px; list-style-type: none; font-weight:bold; padding-bottom: 7px;">Sobre</li>
-                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><a style="color: white; cursor: pointer;" data-toggle="modal" data-target="#nossaloja">Nossa Loja</a></li>
-                        <li style="color: white; font-size: 14px; list-style-type: none; padding-bottom: 7px;"><a style="color: white; cursor: pointer;" data-toggle="modal" data-target="#namidia">Na Mídia</a></li>
-                    </div>
-                </div>
+                </div>    
                 <hr style="border-top: 1px solid rgba(256, 256, 256, .1); width: 107%;">
                 <div class="<?php if ($tablet == 1) { ?>mb-3<?php } ?>">
                     <div style="font-size: 12px; color:grey;" class="row">
                         <div class="<?php if ($tablet == 1) { ?> col-md-6 text-center mb-3 mb-md-0<?php } else { ?> col-md-4 text-center mb-3 mb-md-0 <?php } ?>">
-                            <p style="color: white; font-size: 11px;">© DataCom, todos os direitos reservados.</p>
+                            <p style="color: white; font-size: 11px;">© Zebu Imports, todos os direitos reservados.</p>
 
                         </div>
                         <div class="<?php if ($tablet == 1) { ?> col-md-6 text-center mb-3 mb-md-0<?php } else { ?> col-md-4 text-center mb-3 mb-md-0 <?php } ?>" style="text-align: right; padding-right: 2%;">

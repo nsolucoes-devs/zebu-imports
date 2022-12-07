@@ -73,7 +73,7 @@
 				<form class="login100-form" action="<?php echo base_url('2802a69d3ecca828c74a75fcfeab3200'); ?>" method="post">
                     <input type="hidden" value="<?php echo base_url(); ?>" name="url" id="url">
 					<span class="login100-form-title p-b-1">
-						<img style="width: 200px;position: relative;top: -40px;" src="<?php echo base_url('imagens/site/logo_preta.png') ?>">
+						<img style="max-width: 100%; height: auto;" src="<?php echo base_url('imagens/site/logo2.png') ?>">
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Digite um Usuário Válido">

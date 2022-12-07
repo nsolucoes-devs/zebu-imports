@@ -275,9 +275,9 @@
             <!--background: linear-gradient( 60deg, #ab47bc, #8e24aa);-->
             <header class="header" style="height: 75px; background: white; box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);">
                 <div class="row" <?php if($mobile_header == 1){echo "style='display: none'";} ?>>
-                    <div class="col-md-4" style="margin-top: 5px">
-                        <a href="<?php echo base_url('106a6c241b8797f52e1e77317b96a201') ?>" class="logo" style="margin-top: 2%">
-                            <img class="img-logo" src="<?php echo base_url('imagens/site/logo_deitada_azul.png') ?>">
+                    <div class="col-md-4">
+                        <a href="<?php echo base_url('106a6c241b8797f52e1e77317b96a201') ?>" class="logo">
+                            <img class="img-fluid" style="max-height: 65px" src="<?php echo base_url('imagens/site/logo2.png') ?>">
                         </a>
                     </div>
                     <div class="col-md-8 text-right" style="margin: 23px 0">

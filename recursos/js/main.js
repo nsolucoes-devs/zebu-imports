@@ -91,7 +91,7 @@ $(document).ready(function () {
     if ($('.teste').length) {
         var viewedSlider = $('.teste');
         viewedSlider.owlCarousel({
-            loop: true,
+            loop: false,
             margin: 50,
             autoplay: true,
             autoplayTimeout: 6000,

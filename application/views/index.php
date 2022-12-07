@@ -1643,7 +1643,13 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                             <div class="item h-100 d-flex justify-content-center">
                                 <div class="d-flex flex-column justify-content-center">
                                     <h3><?= $depoimento['depoimento_titulo'] ?></h3>
-                                    <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:70%">
+                                    <div class="mx-auto w-75">
+                                        <img 
+                                            id="myImg<?= $depoimento['depoimento_id'] ?>" 
+                                            class="img-fluid" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" 
+                                            alt="<?= $depoimento['depoimento_titulo'] ?>" 
+                                        >
+                                    </div>
                                 </div>
                             </div>
                         <?php 

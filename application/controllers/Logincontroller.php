@@ -38,7 +38,7 @@ class Logincontroller extends CI_Controller {
         
         
         //DESATIVADO NO MODO DE DESENVOLVIMENTO - SE ESTIVER EM PRODUÇÃO, POR FAVOR INVERTA A CONDIÇÃO DO IF
-        // if($this->input->post('g-recaptcha-response')){
+        if($this->input->post('g-recaptcha-response')){
             
         // VERIFICA DADOS DO USUARIO NO BANCO
         $login = $this->usuarios->logar($user);
@@ -91,11 +91,11 @@ class Logincontroller extends CI_Controller {
             redirect(base_url('nsgestst'), 'refresh');
         }
         
-        // } else {
-        //     //ERRO DE CAPTCHA NÃO VERIFICADO
-        //     $this->session->set_userdata('mensagem_erro', 4);
-        //     redirect(base_url('nsgestst'), 'refresh');    
-        // }
+        } else {
+            //ERRO DE CAPTCHA NÃO VERIFICADO
+            $this->session->set_userdata('mensagem_erro', 4);
+            redirect(base_url('nsgestst'), 'refresh');    
+        }
         
     }
     

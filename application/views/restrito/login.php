@@ -90,9 +90,9 @@
 						<button id="senha_btn" style="position: absolute;top: 6px;right: 10px;font-size: 22px;" type="button"><i class="fa fa-eye" aria-hidden="true"></i></button>
 					</div>
 					
-					<!-- <?php //if(isset($chave)){ ?>
-                        <div style="margin-left: -10px;" class="g-recaptcha" data-sitekey="<?php //echo $chave['chave_site'] ?>"></div>
-                    <?php //} ?> -->
+					<?php if(isset($chave)){ ?>
+                        <div style="margin-left: -10px;" class="g-recaptcha" data-sitekey="<?php echo $chave['chave_site'] ?>"></div>
+                    <?php } ?>
                     
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">

@@ -1634,14 +1634,14 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                     <?php foreach ($depoimentos as $depoimento) {
                         if ($depoimento['depoimento_ativoimagem'] == 0) { ?>
                             <div class="item h-100 d-flex justify-content-center">
-                                <div class="text-center text-dark" style="display: flex!important; justify-content: center; flex-wrap: wrap; align-content: center;">
+                                <div class="d-flex flex-column justify-content-center" >
                                     <h3><?= $depoimento['depoimento_titulo'] ?></h3>
                                     <p><?= $depoimento['depoimento_texto'] ?></p>
                                 </div>
                             </div>
                         <?php } else { ?>
                             <div class="item h-100 d-flex justify-content-center">
-                                <div class="text-center text-dark" style="display: flex!important; justify-content: center; flex-wrap: wrap; align-content: center;">
+                                <div class="d-flex flex-column justify-content-center">
                                     <h3><?= $depoimento['depoimento_titulo'] ?></h3>
                                     <img id="myImg<?= $depoimento['depoimento_id'] ?>" class="mx-auto" src="<?php echo base_url($depoimento['depoimento_anexo']) ?>" alt="<?= $depoimento['depoimento_titulo'] ?>" style="width:70%">
                                 </div>

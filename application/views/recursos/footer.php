@@ -496,7 +496,6 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
 
     .social-footer {
         font-size: 25px;
-        position: absolute;
         color: white;
     }
 
@@ -655,16 +654,16 @@ if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == t
                 <div class="col-md-6">
                         <div class="row justify-content-center">
                                 <h5 style="color: white; font-size: 14px; list-style-type: none; font-weight:bold; padding-bottom: 7px ;">Conheça nossas redes sociais</h5>
-                                <div class="col-4 my-4 p-0 m-auto">
-                                    <a href="#" target="_blank" style="margin: 22%; margin-left: -14px;">
+                                <div class="col-4 my-4 p-0 m-auto d-flex justify-content-around">
+                                    <a href="#" target="_blank">
                                         <i class="social-footer fab fa-facebook" aria-hidden="true" style="color: var(--base-color)"></i>
                                     </a>
                                 
-                                    <a href="https://www.instagram.com/zebu_imports/" target="_blank" style="margin: 30%;">
+                                    <a href="https://www.instagram.com/zebu_imports/" target="_blank"></a>
                                         <i class="social-footer fab fa-instagram" aria-hidden="true" style="color: var(--base-color)"></i>
                                     </a>
                                 
-                                    <a href="https://contate.me/zebuimports" target="_blank" style="margin: 16%;">
+                                    <a href="https://contate.me/zebuimports">
                                         <i class="social-footer fab fa-whatsapp" aria-hidden="true" style="color: var(--base-color)"></i>
                                     </a>
                                 </div>
